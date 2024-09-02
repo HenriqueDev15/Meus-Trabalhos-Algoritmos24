@@ -5,8 +5,9 @@ using UnityEngine;
 public class camerafollow : MonoBehaviour
 {
     private Transform alvo;
-
+    public int suavidade = 5;
     public Vector3 offset;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,8 @@ public class camerafollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = alvo.position - offset;
+        Vector3 posFinal = alvo.position - offset;
+        transform.position = Vector3.Lerp(transform.position, posFinal, suavidade * Time.deltaTime);
     }
 }
 

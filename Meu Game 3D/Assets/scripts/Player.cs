@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
              rb.AddForce(Vector3.up * forcaPulo, ForceMode.Impulse);
              noChao = false;
          }
-         if (transform.position.y < -5) 
+         if (transform.position.y < -75) 
          {
              
              SceneManager.LoadScene(SceneManager.GetActiveScene().name);
