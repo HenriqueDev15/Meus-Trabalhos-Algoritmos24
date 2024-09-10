@@ -12,6 +12,6 @@ public class Girador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.up* velocidadeGiro * Time.deltaTime, Space.World);
+        transform.Rotate(Vector3.up* velocidadeGiro * Time.deltaTime, Space.World); 
     }
 }
